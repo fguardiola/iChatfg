@@ -54,14 +54,46 @@
 		5315BA8621ABFEB2009D8072 /* iChatfg */ = {
 			isa = PBXGroup;
 			children = (
+				5315BA9C21AC0084009D8072 /* Storyboards */,
+				5315BA9B21AC0078009D8072 /* View */,
+				5315BA9A21AC0072009D8072 /* Utils */,
+				5315BA9921AC0067009D8072 /* Controller */,
 				5315BA8721ABFEB2009D8072 /* AppDelegate.swift */,
-				5315BA8921ABFEB2009D8072 /* ViewController.swift */,
-				5315BA8B21ABFEB2009D8072 /* Main.storyboard */,
 				5315BA8E21ABFEB3009D8072 /* Assets.xcassets */,
-				5315BA9021ABFEB3009D8072 /* LaunchScreen.storyboard */,
 				5315BA9321ABFEB3009D8072 /* Info.plist */,
 			);
 			path = iChatfg;
+			sourceTree = "<group>";
+		};
+		5315BA9921AC0067009D8072 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5315BA8921ABFEB2009D8072 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5315BA9A21AC0072009D8072 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		5315BA9B21AC0078009D8072 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5315BA9C21AC0084009D8072 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				5315BA8B21ABFEB2009D8072 /* Main.storyboard */,
+				5315BA9021ABFEB3009D8072 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
