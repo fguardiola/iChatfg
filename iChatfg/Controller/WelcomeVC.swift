@@ -87,6 +87,11 @@ class WelcomeVC: UIViewController {
         ProgressHUD.dismiss()
         clearTextFields()
         dismissKeyBoard()
+        
+        //send login notification
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: USER_DID_LOGIN_NOTIFICATION), object: nil, userInfo: [kUSERID : FUser.currentId()])
+        
+        
         let mainView = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "mainApplication") as! UITabBarController
         
         self.present(mainView, animated: true, completion: nil)

@@ -20,6 +20,10 @@
 		5315BAA621AC12F6009D8072 /* HelperFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5315BAA221AC12F6009D8072 /* HelperFunctions.swift */; };
 		5315BAA921AC1512009D8072 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5315BAA821AC1512009D8072 /* Extensions.swift */; };
 		5315BAAB21AC27F6009D8072 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5315BAAA21AC27F6009D8072 /* RegisterVC.swift */; };
+		537D936821AD62440000059B /* SettingsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537D936721AD62440000059B /* SettingsTVC.swift */; };
+		537D936A21AD6E650000059B /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537D936921AD6E650000059B /* UserCell.swift */; };
+		537D936C21AD779B0000059B /* UsersTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537D936B21AD779B0000059B /* UsersTVC.swift */; };
+		537D936E21AD9C8E0000059B /* ChatsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537D936D21AD9C8E0000059B /* ChatsVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +44,10 @@
 		5315BAA221AC12F6009D8072 /* HelperFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelperFunctions.swift; sourceTree = "<group>"; };
 		5315BAA821AC1512009D8072 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		5315BAAA21AC27F6009D8072 /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
+		537D936721AD62440000059B /* SettingsTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTVC.swift; sourceTree = "<group>"; };
+		537D936921AD6E650000059B /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
+		537D936B21AD779B0000059B /* UsersTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersTVC.swift; sourceTree = "<group>"; };
+		537D936D21AD9C8E0000059B /* ChatsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +104,9 @@
 			children = (
 				5315BA8921ABFEB2009D8072 /* WelcomeVC.swift */,
 				5315BAAA21AC27F6009D8072 /* RegisterVC.swift */,
+				537D936721AD62440000059B /* SettingsTVC.swift */,
+				537D936B21AD779B0000059B /* UsersTVC.swift */,
+				537D936D21AD9C8E0000059B /* ChatsVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -111,6 +122,7 @@
 		5315BA9B21AC0078009D8072 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				537D936921AD6E650000059B /* UserCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -310,14 +322,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				537D936E21AD9C8E0000059B /* ChatsVC.swift in Sources */,
 				5315BA8A21ABFEB2009D8072 /* WelcomeVC.swift in Sources */,
+				537D936821AD62440000059B /* SettingsTVC.swift in Sources */,
 				5315BAAB21AC27F6009D8072 /* RegisterVC.swift in Sources */,
 				5315BA8821ABFEB2009D8072 /* AppDelegate.swift in Sources */,
 				5315BAA521AC12F6009D8072 /* FCollectionReference.swift in Sources */,
 				5315BAA321AC12F6009D8072 /* Constants.swift in Sources */,
 				5315BAA421AC12F6009D8072 /* FUser.swift in Sources */,
 				5315BAA621AC12F6009D8072 /* HelperFunctions.swift in Sources */,
+				537D936A21AD6E650000059B /* UserCell.swift in Sources */,
 				5315BAA921AC1512009D8072 /* Extensions.swift in Sources */,
+				537D936C21AD779B0000059B /* UsersTVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
