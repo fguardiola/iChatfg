@@ -12,7 +12,8 @@ class ChatsVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        //APPLE STYLE SETTNG TITLE
+        navigationController?.navigationBar.prefersLargeTitles = true
     }
     
 

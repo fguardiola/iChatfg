@@ -11,7 +11,7 @@ import UIKit
 class UserCell: UITableViewCell {
     
     var indexPath: IndexPath!
-    let gestureRecognizer = UIGestureRecognizer()
+    let gestureRecognizer = UITapGestureRecognizer()
 
     @IBOutlet weak var fullNameLbl: UILabel!
     @IBOutlet weak var avatarImg: UIImageView!
@@ -57,6 +57,6 @@ class UserCell: UITableViewCell {
     }
     
     @objc func avatarTap(){
-        print("Avatar tap at \(indexPath)")
+        print("Avatar tap at \(String(describing: indexPath))")
     }
 }

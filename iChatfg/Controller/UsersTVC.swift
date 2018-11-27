@@ -23,11 +23,23 @@ class UsersTVC: UITableViewController, UISearchResultsUpdating {
     var sectionTitleList: [String] = []
     
     //search controller
-    var searchController =  UISearchController()
+    var searchController =  UISearchController(searchResultsController: nil)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         //city is the first option on segment control
+        self.title = "Users"
+        navigationItem.largeTitleDisplayMode = .never
+        //trick to not display more items than the esntries we have. Another option style separator = none
+        tableView.tableFooterView = UIView()
+        
+        
+        //search bar set
+        navigationItem.searchController = self.searchController
+        searchController.searchResultsUpdater = self
+        searchController.dimsBackgroundDuringPresentation = false
+        definesPresentationContext = true
+        
         self.loadUsers(filter: kCITY)
     }
 
