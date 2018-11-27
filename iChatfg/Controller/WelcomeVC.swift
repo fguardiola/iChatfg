@@ -87,7 +87,9 @@ class WelcomeVC: UIViewController {
         ProgressHUD.dismiss()
         clearTextFields()
         dismissKeyBoard()
-        print("Go to App")
+        let mainView = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "mainApplication") as! UITabBarController
+        
+        self.present(mainView, animated: true, completion: nil)
         //Go to app
     }
     

@@ -30,6 +30,7 @@ class RegisterVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
     }
   
     // MARK: - IBActions
@@ -73,7 +74,7 @@ class RegisterVC: UIViewController {
         ] as [String : Any]
         
         // check if user has selected avatarImage
-        if avatarImg == nil{
+        if avatarImage == nil{
             //we have to prepare image to be stored on FB. Data of mage String format
             imageFromInitials(firstName: nameTxt.text!, lastName: surnameTxt.text!) { (avatarFromInitials) in
                 //convert UIimage to data
@@ -110,10 +111,21 @@ class RegisterVC: UIViewController {
             }
             ProgressHUD.dismiss()
             //continue app flow
+            self.goToApp()
             
         }
         
     }
+    
+    func goToApp(){
+        dismissKeyBoard()
+        clearTextFields()
+
+        let mainView = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "mainApplication") as! UITabBarController
+        
+        self.present(mainView, animated: true, completion: nil)
+    }
+    
     func dismissKeyBoard(){
         self.view.endEditing(true)
     }

@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iChatfg/AppDelegate.swift"
-            timestampString = "564926207.728264"
+            timestampString = "565007649.816402"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "20"
@@ -26,7 +26,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iChatfg/Controller/WelcomeVC.swift"
-            timestampString = "564943013.735638"
+            timestampString = "565007649.816514"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "69"
@@ -42,7 +42,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iChatfg/FUser.swift"
-            timestampString = "564943013.735701"
+            timestampString = "565006877.0218379"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "187"
@@ -58,7 +58,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iChatfg/FUser.swift"
-            timestampString = "564943013.7362289"
+            timestampString = "565006877.021902"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "193"
@@ -74,7 +74,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iChatfg/FUser.swift"
-            timestampString = "564943013.736482"
+            timestampString = "565006877.021953"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "183"
@@ -90,7 +90,7 @@
                   moduleName = "iChatfg"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/a67621177/iOSProjects/iChatfg/iChatfg/FUser.swift"
-                  timestampString = "564943013.954185"
+                  timestampString = "565006396.167487"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "183"
@@ -105,7 +105,7 @@
                   moduleName = "iChatfg"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/a67621177/iOSProjects/iChatfg/iChatfg/FUser.swift"
-                  timestampString = "564943013.956355"
+                  timestampString = "565006396.170511"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "185"
@@ -122,7 +122,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iChatfg/FUser.swift"
-            timestampString = "564943013.7367049"
+            timestampString = "565006877.022002"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "207"
@@ -138,7 +138,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iChatfg/FUser.swift"
-            timestampString = "564943013.736902"
+            timestampString = "565006877.022052"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "218"
@@ -154,7 +154,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iChatfg/FUser.swift"
-            timestampString = "564943013.737097"
+            timestampString = "565006877.022103"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "210"
@@ -170,11 +170,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iChatfg/Controller/RegisterVC.swift"
-            timestampString = "564943013.737294"
+            timestampString = "565007649.816648"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "104"
-            endingLineNumber = "104"
+            startingLineNumber = "105"
+            endingLineNumber = "105"
             landmarkName = "finishRegistration(withValues:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -186,12 +186,140 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iChatfg/Controller/RegisterVC.swift"
-            timestampString = "564943013.737335"
+            timestampString = "565007649.816703"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "54"
-            endingLineNumber = "54"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
             landmarkName = "doneBtnPressed(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iChatfg/Controller/RegisterVC.swift"
+            timestampString = "565007649.816753"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "doneBtnPressed(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "iChatfg.RegisterVC.doneBtnPressed(Any) -&gt; ()"
+                  moduleName = "iChatfg"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/a67621177/iOSProjects/iChatfg/iChatfg/Controller/RegisterVC.swift"
+                  timestampString = "565001670.417267"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "3701">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Error&gt;) -&gt; () in iChatfg.RegisterVC.doneBtnPressed(Any) -&gt; ()"
+                  moduleName = "iChatfg"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/a67621177/iOSProjects/iChatfg/iChatfg/Controller/RegisterVC.swift"
+                  timestampString = "565001670.4218889"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "53"
+                  endingLineNumber = "53"
+                  offsetFromSymbolStart = "37">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iChatfg/FUser.swift"
+            timestampString = "565006877.0223759"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "213"
+            endingLineNumber = "213"
+            landmarkName = "registerUserWith(email:password:firstName:lastName:avatar:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iChatfg/Controller/RegisterVC.swift"
+            timestampString = "565007649.816816"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
+            landmarkName = "doneBtnPressed(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iChatfg/FUser.swift"
+            timestampString = "565006877.022529"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "312"
+            endingLineNumber = "312"
+            landmarkName = "saveUserToFirestore(fUser:)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iChatfg/HelperFunctions.swift"
+            timestampString = "565002126.076422"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "167"
+            endingLineNumber = "167"
+            landmarkName = "imageFromInitials(firstName:lastName:withBlock:)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iChatfg/Controller/RegisterVC.swift"
+            timestampString = "565007649.816891"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
+            landmarkName = "registerUser()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
