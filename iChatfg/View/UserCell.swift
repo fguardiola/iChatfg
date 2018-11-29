@@ -7,10 +7,15 @@
 //
 
 import UIKit
-
+protocol UITableViewCellDelegate {
+    func avatarWasTapped(indexPath:IndexPath)
+}
 class UserCell: UITableViewCell {
     
     var indexPath: IndexPath!
+    var delegate: UITableViewCellDelegate?
+    
+    
     let gestureRecognizer = UITapGestureRecognizer()
 
     @IBOutlet weak var fullNameLbl: UILabel!
@@ -57,6 +62,7 @@ class UserCell: UITableViewCell {
     }
     
     @objc func avatarTap(){
-        print("Avatar tap at \(String(describing: indexPath))")
+//        print("Avatar tap at \(String(describing: indexPath))")
+        delegate?.avatarWasTapped(indexPath: self.indexPath)
     }
 }
