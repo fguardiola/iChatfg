@@ -261,7 +261,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="100" id="rOs-bA-wcH">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="100" id="rOs-bA-wcH" customClass="RecentChatCell" customModule="iChatfg" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rOs-bA-wcH" id="dxZ-Ft-5z7">
@@ -330,6 +330,14 @@
                                                 <constraint firstItem="qJT-hF-cX4" firstAttribute="leading" secondItem="VIx-B0-mge" secondAttribute="trailing" constant="5" id="yoo-iX-aAo"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="avatarImgView" destination="KvA-0G-Iqp" id="qgl-od-wow"/>
+                                            <outlet property="dateLbl" destination="qJT-hF-cX4" id="F40-JN-4op"/>
+                                            <outlet property="fullNameLbl" destination="VIx-B0-mge" id="byT-YK-go7"/>
+                                            <outlet property="lastMessageLbl" destination="vJG-0E-1I0" id="2tv-VH-fds"/>
+                                            <outlet property="messageCounterBackGround" destination="hSU-33-FKc" id="Ibn-Pn-eg5"/>
+                                            <outlet property="messageCounterLbl" destination="Hrg-cG-N7H" id="SOj-P8-NiF"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

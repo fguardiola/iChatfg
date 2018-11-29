@@ -26,6 +26,7 @@
 		537D936E21AD9C8E0000059B /* ChatsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537D936D21AD9C8E0000059B /* ChatsVC.swift */; };
 		537D937021AEAE6A0000059B /* ProfileTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537D936F21AEAE6A0000059B /* ProfileTVC.swift */; };
 		537D937221AEFDEC0000059B /* Recent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537D937121AEFDEC0000059B /* Recent.swift */; };
+		53E3B5E121AFFD9900F631FB /* RecentChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E3B5E021AFFD9900F631FB /* RecentChatCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		537D936D21AD9C8E0000059B /* ChatsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsVC.swift; sourceTree = "<group>"; };
 		537D936F21AEAE6A0000059B /* ProfileTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTVC.swift; sourceTree = "<group>"; };
 		537D937121AEFDEC0000059B /* Recent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recent.swift; sourceTree = "<group>"; };
+		53E3B5E021AFFD9900F631FB /* RecentChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentChatCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				537D936921AD6E650000059B /* UserCell.swift */,
+				53E3B5E021AFFD9900F631FB /* RecentChatCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -337,6 +340,7 @@
 				5315BAA321AC12F6009D8072 /* Constants.swift in Sources */,
 				537D937021AEAE6A0000059B /* ProfileTVC.swift in Sources */,
 				5315BAA421AC12F6009D8072 /* FUser.swift in Sources */,
+				53E3B5E121AFFD9900F631FB /* RecentChatCell.swift in Sources */,
 				5315BAA621AC12F6009D8072 /* HelperFunctions.swift in Sources */,
 				537D937221AEFDEC0000059B /* Recent.swift in Sources */,
 				537D936A21AD6E650000059B /* UserCell.swift in Sources */,
