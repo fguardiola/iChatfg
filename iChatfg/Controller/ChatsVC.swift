@@ -100,6 +100,73 @@ class ChatsVC: UIViewController,UITableViewDelegate,UITableViewDataSource,Recent
         
         return cell
     }
+    //Mark: - functions to present Delete Mute buttons
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]
+    {
+        //we need to Know whch row we are dealing with
+        var tempRecent : NSDictionary!
+        
+        if (searchController.isActive && searchController.searchBar.text != ""){
+            tempRecent = self.filteredChats[indexPath.row]
+        }else{
+            tempRecent = self.recentChats[indexPath.row]
+        }
+        //mute
+        var mute = false
+        var muteTitle = "UnMute"
+        
+        if(tempRecent[kMEMBERSTOPUSH] as! [String]).contains(FUser.currentId()){
+            //mute or unmute
+            mute = true
+            muteTitle = "Mute"
+        }
+        
+        //create actions
+        let muteAction = UITableViewRowAction(style: .default, title: muteTitle) { (action, indexPath) in
+            print("Mute \(indexPath) chat")
+           // modify memebers to puch dictionary
+        }
+        muteAction.backgroundColor = #colorLiteral(red: 0.3631127477, green: 0.4045833051, blue: 0.8775706887, alpha: 1)
+        
+        
+        let deleteAction = UITableViewRowAction(style: .default, title: "Delete") { (action, indexPath) in
+            print("Delete \(indexPath) chat")
+            // delete recent & chat in the future
+            //first delete on local array
+            self.recentChats.remove(at: indexPath.row)
+            self.tableView.reloadData()
+            self.deleteRecent(recent: tempRecent)
+            
+        }
+        
+        //return actions/buttons
+        return [muteAction,deleteAction]
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // we have to navigate to chat, but we hav to restart or create new recents for users that have deleted
+        //the chat
+        //we need to Know whch row we are dealing with
+        var recent : NSDictionary!
+        
+        if (searchController.isActive && searchController.searchBar.text != ""){
+            recent = self.filteredChats[indexPath.row]
+        }else{
+            recent = self.recentChats[indexPath.row]
+        }
+        
+        self.restartRecentChat(recent: recent)
+        let chatVC = ChatVC()
+        
+        chatVC.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(chatVC, animated: true)
+    }
+    
+    //Load data from FB
     func loadRecentChats(){
         //Set listerner
         self.recentListener = reference(.Recent).whereField(kUSERID, isEqualTo: FUser.currentId()).addSnapshotListener({ (snapshot, error) in
@@ -209,6 +276,32 @@ class ChatsVC: UIViewController,UITableViewDelegate,UITableViewDataSource,Recent
     func updateSearchResults(for searchController: UISearchController) {
         //call filter function
         filterContentFoSearchText(searchText: searchController.searchBar.text!)
+    }
+    
+    func deleteRecent(recent: NSDictionary){
+        guard let recentId = recent[kRECENTID] as? String else{ return }
+        
+        reference(.Recent).document(recentId).delete()
+    }
+    
+    func restartRecentChat(recent: NSDictionary){
+        //we have to distinguish between private and group chats
+        
+        if recent[kTYPE] as! String == kPRIVATE {
+            //one o one chat
+            //invoke our createRecent func
+            print(recent[kMEMBERSTOPUSH] as! [String])
+            print(recent[kCHATROOMID] as! String)
+            print(recent[kWITHUSERFULLNAME] as! String)
+            createRecentChat(members: recent[kMEMBERSTOPUSH] as! [String], chatRoomId: recent[kCHATROOMID] as! String, withUserUserName: FUser.currentUser()!.firstname, type: kPRIVATE, users: [FUser.currentUser()!], avatarOfGroup: nil)
+        }
+        
+        if recent[kTYPE] as! String == kGROUP {
+            createRecentChat(members: recent[kMEMBERSTOPUSH] as! [String], chatRoomId: recent[kCHATROOMID] as! String, withUserUserName: recent[kWITHUSERFULLNAME] as! String, type: kPRIVATE, users: nil, avatarOfGroup: recent[kAVATAR] as! String)
+            
+            
+        }
+        
     }
 }
 

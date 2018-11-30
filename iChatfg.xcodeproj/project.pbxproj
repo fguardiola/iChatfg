@@ -27,6 +27,7 @@
 		537D937021AEAE6A0000059B /* ProfileTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537D936F21AEAE6A0000059B /* ProfileTVC.swift */; };
 		537D937221AEFDEC0000059B /* Recent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537D937121AEFDEC0000059B /* Recent.swift */; };
 		53E3B5E121AFFD9900F631FB /* RecentChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E3B5E021AFFD9900F631FB /* RecentChatCell.swift */; };
+		53E3B5E321B15C9600F631FB /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E3B5E221B15C9600F631FB /* ChatVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		537D936F21AEAE6A0000059B /* ProfileTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTVC.swift; sourceTree = "<group>"; };
 		537D937121AEFDEC0000059B /* Recent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recent.swift; sourceTree = "<group>"; };
 		53E3B5E021AFFD9900F631FB /* RecentChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentChatCell.swift; sourceTree = "<group>"; };
+		53E3B5E221B15C9600F631FB /* ChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 				537D936B21AD779B0000059B /* UsersTVC.swift */,
 				537D936D21AD9C8E0000059B /* ChatsVC.swift */,
 				537D936F21AEAE6A0000059B /* ProfileTVC.swift */,
+				53E3B5E221B15C9600F631FB /* ChatVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -331,6 +334,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53E3B5E321B15C9600F631FB /* ChatVC.swift in Sources */,
 				537D936E21AD9C8E0000059B /* ChatsVC.swift in Sources */,
 				5315BA8A21ABFEB2009D8072 /* WelcomeVC.swift in Sources */,
 				537D936821AD62440000059B /* SettingsTVC.swift in Sources */,
