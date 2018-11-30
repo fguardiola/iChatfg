@@ -34,6 +34,8 @@ class RecentChatCell: UITableViewCell {
         // Call function when Image tapped
         avatarImgView.isUserInteractionEnabled = true
         avatarImgView.addGestureRecognizer(tapGesture)
+        messageCounterBackGround.layer.cornerRadius = messageCounterBackGround.frame.size.width / 2
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -54,14 +56,14 @@ class RecentChatCell: UITableViewCell {
         
         self.fullNameLbl.text = recentChat[kWITHUSERFULLNAME] as! String
         self.lastMessageLbl.text = recentChat[kLASTMESSAGE] as! String
-        self.messageCounterLbl.text = recentChat[kCOUNTER] as! String
+        self.messageCounterLbl.text = "\(recentChat[kCOUNTER] as! Int)"
         
         //avatar image. We have data as string. convrt it to UIImage
         if let avatarString = recentChat[kAVATAR]{
             imageFromData(pictureData: avatarString as! String) { (image) in
                 if image != nil {
                     //set image
-                    self.avatarImgView.image = image
+                    self.avatarImgView.image = image?.circleMasked
                 }
             }
         }
@@ -73,8 +75,8 @@ class RecentChatCell: UITableViewCell {
                 self.messageCounterBackGround.isHidden = true
                 
             }else{
-                self.messageCounterLbl.isHidden = true
-                self.messageCounterBackGround.isHidden = true
+                self.messageCounterLbl.isHidden = false
+                self.messageCounterBackGround.isHidden = false
                 
                 self.messageCounterLbl.text = "\(counter)"
             }
