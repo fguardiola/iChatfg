@@ -106,8 +106,10 @@ static void * kJSQMessagesInputToolbarKeyValueObservingContext = &kJSQMessagesIn
 
 - (void)toggleSendButtonEnabled
 {
-    BOOL hasText = [self.contentView.textView hasText];
-
+    //fix or custom mic button
+    
+//    BOOL hasText = [self.contentView.textView hasText];
+    BOOL hasText = true;
     if (self.sendButtonOnRight) {
         self.contentView.rightBarButtonItem.enabled = hasText;
     }
