@@ -20,6 +20,8 @@
 		5315BAA621AC12F6009D8072 /* HelperFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5315BAA221AC12F6009D8072 /* HelperFunctions.swift */; };
 		5315BAA921AC1512009D8072 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5315BAA821AC1512009D8072 /* Extensions.swift */; };
 		5315BAAB21AC27F6009D8072 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5315BAAA21AC27F6009D8072 /* RegisterVC.swift */; };
+		5346FC2B21B81E1E0023F52A /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5346FC2A21B81E1E0023F52A /* Camera.swift */; };
+		5346FC2D21B826640023F52A /* Downloade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5346FC2C21B826640023F52A /* Downloade.swift */; };
 		537D936821AD62440000059B /* SettingsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537D936721AD62440000059B /* SettingsTVC.swift */; };
 		537D936A21AD6E650000059B /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537D936921AD6E650000059B /* UserCell.swift */; };
 		537D936C21AD779B0000059B /* UsersTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537D936B21AD779B0000059B /* UsersTVC.swift */; };
@@ -50,6 +52,8 @@
 		5315BAA221AC12F6009D8072 /* HelperFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelperFunctions.swift; sourceTree = "<group>"; };
 		5315BAA821AC1512009D8072 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		5315BAAA21AC27F6009D8072 /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
+		5346FC2A21B81E1E0023F52A /* Camera.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
+		5346FC2C21B826640023F52A /* Downloade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Downloade.swift; sourceTree = "<group>"; };
 		537D936721AD62440000059B /* SettingsTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTVC.swift; sourceTree = "<group>"; };
 		537D936921AD6E650000059B /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		537D936B21AD779B0000059B /* UsersTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersTVC.swift; sourceTree = "<group>"; };
@@ -102,9 +106,6 @@
 				5315BA9A21AC0072009D8072 /* Utils */,
 				5315BA9921AC0067009D8072 /* Controller */,
 				5315BA8721ABFEB2009D8072 /* AppDelegate.swift */,
-				5315BAA121AC12F5009D8072 /* FCollectionReference.swift */,
-				5315BAA021AC12F5009D8072 /* FUser.swift */,
-				5315BAA221AC12F6009D8072 /* HelperFunctions.swift */,
 				5315BA8E21ABFEB3009D8072 /* Assets.xcassets */,
 				5315BA9321ABFEB3009D8072 /* Info.plist */,
 				5315BA9D21AC0CA3009D8072 /* GoogleService-Info.plist */,
@@ -129,6 +130,10 @@
 		5315BA9A21AC0072009D8072 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				5346FC2C21B826640023F52A /* Downloade.swift */,
+				5315BAA021AC12F5009D8072 /* FUser.swift */,
+				5315BAA121AC12F5009D8072 /* FCollectionReference.swift */,
+				5315BAA221AC12F6009D8072 /* HelperFunctions.swift */,
 				5315BA9F21AC12F5009D8072 /* Constants.swift */,
 				537D937121AEFDEC0000059B /* Recent.swift */,
 			);
@@ -164,6 +169,7 @@
 		53E3B5E421B5551600F631FB /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				5346FC2A21B81E1E0023F52A /* Camera.swift */,
 				53E3B5E521B5553700F631FB /* OutgoingMessage.swift */,
 				53E3B5E721B57EFE00F631FB /* IncomingMessage.swift */,
 			);
@@ -360,12 +366,14 @@
 				537D937021AEAE6A0000059B /* ProfileTVC.swift in Sources */,
 				5315BAA421AC12F6009D8072 /* FUser.swift in Sources */,
 				53E3B5E121AFFD9900F631FB /* RecentChatCell.swift in Sources */,
+				5346FC2B21B81E1E0023F52A /* Camera.swift in Sources */,
 				5315BAA621AC12F6009D8072 /* HelperFunctions.swift in Sources */,
 				537D937221AEFDEC0000059B /* Recent.swift in Sources */,
 				537D936A21AD6E650000059B /* UserCell.swift in Sources */,
 				5315BAA921AC1512009D8072 /* Extensions.swift in Sources */,
 				537D936C21AD779B0000059B /* UsersTVC.swift in Sources */,
 				53E3B5E821B57EFE00F631FB /* IncomingMessage.swift in Sources */,
+				5346FC2D21B826640023F52A /* Downloade.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

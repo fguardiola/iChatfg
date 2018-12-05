@@ -15,7 +15,7 @@ import AVFoundation
 import AVKit
 import FirebaseFirestore
 
-class ChatVC: JSQMessagesViewController {
+class ChatVC: JSQMessagesViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate {
     
     //variables pass from previous view controller
     var chatRoomId : String!
@@ -28,6 +28,9 @@ class ChatVC: JSQMessagesViewController {
     var loadOld = false
     //count the messages loaded from FB
     var loadedMessagesCount = 0
+    var isGroup : Bool?
+    var group: NSDictionary?
+    var withUsers : [FUser] = []
     
     var messages : [JSQMessage] = []
     var messagesDictionaryArray : [NSDictionary] = []
@@ -48,6 +51,31 @@ class ChatVC: JSQMessagesViewController {
     // Configure library necessary variables
     var outGoingBubble = JSQMessagesBubbleImageFactory()?.outgoingMessagesBubbleImage(with: UIColor.jsq_messageBubbleBlue())
     var incomingBubble = JSQMessagesBubbleImageFactory()?.outgoingMessagesBubbleImage(with: UIColor.jsq_messageBubbleLightGray())
+    //MARK:- Custom header
+    //view
+    var leftBarView : UIView = {
+        let view = UIView(frame: CGRect(x: 0, y: 0, width: 200, height: 45))
+        return view
+    }()
+    //avatar
+    var avatarButton : UIButton = {
+        let button = UIButton(frame: CGRect(x: 0, y: 10, width: 25, height: 25))
+        return button
+    }()
+    //title & subtitle
+    var titleLbl: UILabel = {
+        let title = UILabel(frame: CGRect(x: 30, y: 10, width: 140, height: 15))
+        title.textAlignment = .left
+        title.font = UIFont(name: title.font.fontName, size: 14)
+        return title
+    }()
+    var subtTitleLbl: UILabel = {
+        let subTitle = UILabel(frame: CGRect(x: 30, y: 25, width: 140, height: 15))
+        subTitle.textAlignment = .left
+        subTitle.font = UIFont(name: subTitle.font.fontName, size: 10)
+        return subTitle
+    }()
+    
     //fixes for iphone 10
     
     override func viewDidLayoutSubviews() {
@@ -65,6 +93,10 @@ class ChatVC: JSQMessagesViewController {
         navigationItem.largeTitleDisplayMode = .never
         //csutom back button
         navigationItem.leftBarButtonItems = [UIBarButtonItem(image: UIImage(named: "Back"), style: .plain, target: self, action: #selector(self.backButtonPressed))]
+        //temp
+        self.isGroup = false
+        self.setUI()
+        
         
         //set avatar sizes to zero. Colllection view is part of the library
         collectionView.collectionViewLayout.incomingAvatarViewSize = CGSize.zero
@@ -191,6 +223,8 @@ class ChatVC: JSQMessagesViewController {
     //accessory button pressed
     override func didPressAccessoryButton(_ sender: UIButton!) {
         print("Acessory btn pressed!!")
+        
+        let camera = Camera(delegate_: self)
         //display menu when clicking accessory btn
         
         //crete menu alert
@@ -199,10 +233,12 @@ class ChatVC: JSQMessagesViewController {
         //create our actions for menu
         let takePhotoOrVideo = UIAlertAction(title: "Camera", style: .default) { (action) in
             print("Camera pressed!!")
+           
         }
         
         let sharePicture = UIAlertAction(title: "Photo library", style: .default) { (action) in
             print("Photo library pressed!!")
+             camera.PresentPhotoLibrary(target: self, canEdit: false)
         }
         
         let shareVideo = UIAlertAction(title: "Video Library", style: .default) { (action) in
@@ -463,7 +499,21 @@ class ChatVC: JSQMessagesViewController {
     @objc func backButtonPressed(){
         print("Back button pressed")
     }
+    @objc func infoButtonPressed(){
+        print("Info button pressed")
+    }
     
+    @objc func groupIconPressed(){
+        print("Group Icon Pressed!!")
+    }
+    @objc func userIconPressed(){
+        //navigate to user profile
+          print("User Icon Pressed!!")
+        let profileVC = UIStoryboard.init(name:"Main",bundle:nil).instantiateViewController(withIdentifier: "userProfile") as! ProfileTVC
+             profileVC.user = self.withUsers.first
+        
+        navigationController?.pushViewController(profileVC, animated: true)
+    }
     func updateSendButton(isSend:Bool){
         //update image
         if isSend{
@@ -479,11 +529,35 @@ class ChatVC: JSQMessagesViewController {
         let currentUser = FUser.currentUser()!
         //Here we can have any kinfd of message
         
+        //Text message
         if let text = text {
             //message is not nil
             outgoingMessage = OutgoingMessage(message: text, senderId: currentUser.objectId, senderName: currentUser.firstname, date: date, status: kDELIVERED, type: kTEXT)
             
         }
+        //Picture message
+        if let pic = picture{
+            uploadImage(image: pic, chatRoomId: self.chatRoomId, view: self.navigationController!.view) { (imageLink) in
+                if imageLink != nil {
+                    
+                    //to display on chatsVC as last message sent
+                    let text = kPICTURE
+                    outgoingMessage = OutgoingMessage(message: text, pictureLink: imageLink!, senderId: currentUser.objectId, senderName: currentUser.firstname, date: date, status: kDELIVERED, type: kPICTURE)
+                    
+                    JSQSystemSoundPlayer.jsq_playMessageSentSound()
+                    self.finishSendingMessage()
+                    
+                    //we have here any kind of message
+                    outgoingMessage?.sendMessage(chatRomId: self.chatRoomId, messageDictionary:outgoingMessage!.messageDctionary , memebersIds: self.chatMembers)
+                    
+                }else{
+                    return
+                }
+            }
+            return
+        }
+        
+        
         JSQSystemSoundPlayer.jsq_playMessageSentSound()
         self.finishSendingMessage()
         
@@ -513,6 +587,19 @@ class ChatVC: JSQMessagesViewController {
         print("IsIncoming",messageDictionary[kSENDERID] as! String == FUser.currentId())
         return messageDictionary[kSENDERID] as! String != FUser.currentId()
     }
+    //MARK:- UIIagePickerController delegate
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        //function invoked when you click on picture/video
+        let video = info[UIImagePickerController.InfoKey.mediaURL] as? NSURL
+        let picture = info[UIImagePickerController.InfoKey.originalImage] as? UIImage
+        
+        sendMessage(text: nil, date: Date(), picture: picture, video: video, audio: nil)
+        
+        picker.dismiss(animated: true, completion: nil)
+    }
+    
+    
+    
     
     //display tim in HH:mm
     func readTimeFrom(dateString:String) ->String{
@@ -523,5 +610,49 @@ class ChatVC: JSQMessagesViewController {
         
         return newDateFormat.string(from: date!)
         
+    }
+    
+    func setUI(){
+        
+        leftBarView.addSubview(self.avatarButton)
+        leftBarView.addSubview(self.titleLbl)
+        leftBarView.addSubview(self.subtTitleLbl)
+        
+        //Create right info button
+        let inFoButton = UIBarButtonItem(image: UIImage(named: "info"), style: .plain, target: self, action: #selector(self.infoButtonPressed))
+        
+        //Add to navbar
+        navigationItem.rightBarButtonItem = inFoButton
+        let leftBarButton = UIBarButtonItem(customView: leftBarView)
+        //add target to button depending on is group or not
+        if self.isGroup!{
+            self.avatarButton.addTarget(self, action: #selector(self.groupIconPressed), for: .touchUpInside)
+        }else{
+            self.avatarButton.addTarget(self, action: #selector(self.userIconPressed), for: .touchUpInside)
+        }
+        
+        navigationItem.leftBarButtonItems?.append(leftBarButton)
+        
+        getUsersFromFirestore(withIds: chatMembers) { (users) in
+            self.withUsers = users
+            //update leftbarbutton
+            if !self.isGroup!{
+                //update user info
+                self.setUserInfo(user: self.withUsers.first!)
+            }
+        }
+        
+        //
+        
+        
+    }
+    func setUserInfo(user:FUser){
+        titleLbl.text = user.fullname
+        subtTitleLbl.text = user.isOnline ? "Online": "Offline"
+        imageFromData(pictureData: user.avatar) { (image) in
+            if (image != nil) {
+                self.avatarButton.setImage(image?.circleMasked, for: .normal)
+            }
+        }
     }
 }

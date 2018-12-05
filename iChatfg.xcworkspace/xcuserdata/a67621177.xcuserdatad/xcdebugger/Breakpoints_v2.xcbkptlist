@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iChatfg/AppDelegate.swift"
-            timestampString = "565536912.677349"
+            timestampString = "565711331.050395"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "20"
@@ -26,7 +26,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iChatfg/Controller/WelcomeVC.swift"
-            timestampString = "565103690.426511"
+            timestampString = "565721368.286533"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "69"
@@ -81,38 +81,6 @@
             endingLineNumber = "183"
             landmarkName = "loginUserWith(email:password:completion:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "static iChatfg.FUser.loginUserWith(email: Swift.String, password: Swift.String, completion: (Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "iChatfg"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/a67621177/iOSProjects/iChatfg/iChatfg/FUser.swift"
-                  timestampString = "565698721.1983581"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "183"
-                  endingLineNumber = "183"
-                  offsetFromSymbolStart = "49">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRAuthDataResult&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in static iChatfg.FUser.loginUserWith(email: Swift.String, password: Swift.String, completion: (Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "iChatfg"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/a67621177/iOSProjects/iChatfg/iChatfg/FUser.swift"
-                  timestampString = "565698721.2005709"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "185"
-                  endingLineNumber = "185"
-                  offsetFromSymbolStart = "45">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -298,7 +266,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iChatfg/HelperFunctions.swift"
-            timestampString = "565002126.076422"
+            timestampString = "565712210.858951"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "167"
@@ -426,11 +394,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iChatfg/Controller/ChatVC.swift"
-            timestampString = "565698668.011364"
+            timestampString = "565721368.286966"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "76"
-            endingLineNumber = "76"
+            startingLineNumber = "108"
+            endingLineNumber = "108"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -442,11 +410,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iChatfg/Controller/ChatVC.swift"
-            timestampString = "565698668.0118231"
+            timestampString = "565721368.287605"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "78"
-            endingLineNumber = "78"
+            startingLineNumber = "110"
+            endingLineNumber = "110"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
             <Locations>
@@ -490,43 +458,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iChatfg/Controller/ChatVC.swift"
-            timestampString = "565698668.012152"
+            timestampString = "565721368.288164"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "399"
-            endingLineNumber = "399"
-            landmarkName = "insertMessages()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "iChatfg/Controller/ChatVC.swift"
-            timestampString = "565698668.012504"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "291"
-            endingLineNumber = "291"
-            landmarkName = "loadMessages()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "iChatfg/Controller/ChatVC.swift"
-            timestampString = "565698668.012814"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "395"
-            endingLineNumber = "395"
+            startingLineNumber = "435"
+            endingLineNumber = "435"
             landmarkName = "insertMessages()"
             landmarkType = "7">
          </BreakpointContent>
@@ -538,11 +474,27 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iChatfg/Controller/ChatVC.swift"
-            timestampString = "565698668.013122"
+            timestampString = "565721368.288619"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "509"
-            endingLineNumber = "509"
+            startingLineNumber = "431"
+            endingLineNumber = "431"
+            landmarkName = "insertMessages()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iChatfg/Controller/ChatVC.swift"
+            timestampString = "565721368.288928"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "583"
+            endingLineNumber = "583"
             landmarkName = "removeBadMessages(allmessages:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -554,11 +506,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iChatfg/Controller/ChatVC.swift"
-            timestampString = "565698668.013429"
+            timestampString = "565721368.28922"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "497"
-            endingLineNumber = "497"
+            startingLineNumber = "571"
+            endingLineNumber = "571"
             landmarkName = "removeBadMessages(allmessages:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -570,11 +522,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iChatfg/Controller/ChatVC.swift"
-            timestampString = "565698668.01375"
+            timestampString = "565721368.289497"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "500"
-            endingLineNumber = "500"
+            startingLineNumber = "574"
+            endingLineNumber = "574"
             landmarkName = "removeBadMessages(allmessages:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -586,11 +538,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iChatfg/Controller/ChatVC.swift"
-            timestampString = "565698668.0140851"
+            timestampString = "565721368.289768"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "501"
-            endingLineNumber = "501"
+            startingLineNumber = "575"
+            endingLineNumber = "575"
             landmarkName = "removeBadMessages(allmessages:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -602,11 +554,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iChatfg/Controller/ChatVC.swift"
-            timestampString = "565698668.014374"
+            timestampString = "565721368.2900341"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "502"
-            endingLineNumber = "502"
+            startingLineNumber = "576"
+            endingLineNumber = "576"
             landmarkName = "removeBadMessages(allmessages:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -618,11 +570,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iChatfg/Controller/ChatVC.swift"
-            timestampString = "565698668.014702"
+            timestampString = "565721368.2902991"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "342"
-            endingLineNumber = "342"
+            startingLineNumber = "378"
+            endingLineNumber = "378"
             landmarkName = "listenForNewMessages()"
             landmarkType = "7">
          </BreakpointContent>
@@ -634,11 +586,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iChatfg/Controller/ChatVC.swift"
-            timestampString = "565698668.015094"
+            timestampString = "565721368.29055"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "514"
-            endingLineNumber = "514"
+            startingLineNumber = "588"
+            endingLineNumber = "588"
             landmarkName = "isIncoming(messageDictionary:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -650,11 +602,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iChatfg/Controller/ChatVC.swift"
-            timestampString = "565698668.015429"
+            timestampString = "565721368.2908061"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "398"
-            endingLineNumber = "398"
+            startingLineNumber = "434"
+            endingLineNumber = "434"
             landmarkName = "insertMessages()"
             landmarkType = "7">
          </BreakpointContent>
@@ -666,43 +618,107 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iChatfg/Controller/ChatVC.swift"
-            timestampString = "565698668.015747"
+            timestampString = "565721368.291198"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "360"
-            endingLineNumber = "360"
-            landmarkName = "loadOldMessages()"
+            startingLineNumber = "472"
+            endingLineNumber = "472"
+            landmarkName = "loadMoreMessages(maxNumber:minNumber:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iChatfg/Controller/ChatVC.swift"
+            timestampString = "565721368.2916631"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "476"
+            endingLineNumber = "476"
+            landmarkName = "loadMoreMessages(maxNumber:minNumber:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iChatfg/Controller/ChatVC.swift"
+            timestampString = "565721368.291999"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "477"
+            endingLineNumber = "477"
+            landmarkName = "loadMoreMessages(maxNumber:minNumber:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iChatfg/Controller/ChatVC.swift"
+            timestampString = "565721368.292411"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "483"
+            endingLineNumber = "483"
+            landmarkName = "loadMoreMessages(maxNumber:minNumber:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iChatfg/Controller/ChatVC.swift"
+            timestampString = "565721368.292686"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "540"
+            endingLineNumber = "540"
+            landmarkName = "sendMessage(text:date:picture:video:audio:)"
             landmarkType = "7">
             <Locations>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "iChatfg.ChatVC.loadOldMessages() -&gt; ()"
+                  symbolName = "iChatfg.ChatVC.sendMessage(text: Swift.Optional&lt;Swift.String&gt;, date: Foundation.Date, picture: Swift.Optional&lt;__C.UIImage&gt;, video: Swift.Optional&lt;__C.NSURL&gt;, audio: Swift.Optional&lt;Swift.String&gt;) -&gt; ()"
                   moduleName = "iChatfg"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/a67621177/iOSProjects/iChatfg/iChatfg/Controller/ChatVC.swift"
-                  timestampString = "565698721.255815"
+                  timestampString = "565721368.5968111"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "360"
-                  endingLineNumber = "360"
-                  offsetFromSymbolStart = "794">
+                  startingLineNumber = "540"
+                  endingLineNumber = "540"
+                  offsetFromSymbolStart = "958">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRQuerySnapshot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in iChatfg.ChatVC.loadOldMessages() -&gt; ()"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.String&gt;) -&gt; () in iChatfg.ChatVC.sendMessage(text: Swift.Optional&lt;Swift.String&gt;, date: Foundation.Date, picture: Swift.Optional&lt;__C.UIImage&gt;, video: Swift.Optional&lt;__C.NSURL&gt;, audio: Swift.Optional&lt;Swift.String&gt;) -&gt; ()"
                   moduleName = "iChatfg"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/a67621177/iOSProjects/iChatfg/iChatfg/Controller/ChatVC.swift"
-                  timestampString = "565698721.257309"
+                  timestampString = "565721368.598596"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "361"
-                  endingLineNumber = "361"
-                  offsetFromSymbolStart = "57">
+                  startingLineNumber = "528"
+                  endingLineNumber = "528"
+                  offsetFromSymbolStart = "56">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -710,16 +726,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iChatfg/Controller/ChatVC.swift"
-            timestampString = "565698668.016052"
+            timestampString = "565721368.2929029"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "365"
-            endingLineNumber = "365"
-            landmarkName = "loadOldMessages()"
+            startingLineNumber = "543"
+            endingLineNumber = "543"
+            landmarkName = "sendMessage(text:date:picture:video:audio:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -729,14 +745,78 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "iChatfg/Controller/ChatVC.swift"
-            timestampString = "565698668.0163471"
+            filePath = "iChatfg/Utils/Downloade.swift"
+            timestampString = "565721368.293339"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "366"
-            endingLineNumber = "366"
-            landmarkName = "loadOldMessages()"
-            landmarkType = "7">
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "uploadImage(image:chatRoomId:view:completion:)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iChatfg/Utils/Downloade.swift"
+            timestampString = "565721368.293401"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "uploadImage(image:chatRoomId:view:completion:)"
+            landmarkType = "9">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "iChatfg.uploadImage(image: __C.UIImage, chatRoomId: Swift.String, view: __C.UIView, completion: (Swift.Optional&lt;Swift.String&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "iChatfg"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/a67621177/iOSProjects/iChatfg/iChatfg/Utils/Downloade.swift"
+                  timestampString = "565721368.612222"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "1562">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRStorageMetadata&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in iChatfg.uploadImage(image: __C.UIImage, chatRoomId: Swift.String, view: __C.UIView, completion: (Swift.Optional&lt;Swift.String&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "iChatfg"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/a67621177/iOSProjects/iChatfg/iChatfg/Utils/Downloade.swift"
+                  timestampString = "565721368.613909"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "89">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iChatfg/Utils/Downloade.swift"
+            timestampString = "565721368.293453"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "uploadImage(image:chatRoomId:view:completion:)"
+            landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -746,76 +826,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iChatfg/Controller/ChatVC.swift"
-            timestampString = "565698668.016634"
+            timestampString = "565721368.293506"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "363"
-            endingLineNumber = "363"
-            landmarkName = "loadOldMessages()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "iChatfg/Controller/ChatVC.swift"
-            timestampString = "565698668.016922"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "436"
-            endingLineNumber = "436"
-            landmarkName = "loadMoreMessages(maxNumber:minNumber:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "iChatfg/Controller/ChatVC.swift"
-            timestampString = "565698668.017212"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "440"
-            endingLineNumber = "440"
-            landmarkName = "loadMoreMessages(maxNumber:minNumber:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "iChatfg/Controller/ChatVC.swift"
-            timestampString = "565698668.017531"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "441"
-            endingLineNumber = "441"
-            landmarkName = "loadMoreMessages(maxNumber:minNumber:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "iChatfg/Controller/ChatVC.swift"
-            timestampString = "565698668.018199"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "447"
-            endingLineNumber = "447"
-            landmarkName = "loadMoreMessages(maxNumber:minNumber:)"
+            startingLineNumber = "565"
+            endingLineNumber = "565"
+            landmarkName = "sendMessage(text:date:picture:video:audio:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

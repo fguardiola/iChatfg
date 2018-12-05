@@ -169,7 +169,8 @@ class ChatsVC: UIViewController,UITableViewDelegate,UITableViewDataSource,Recent
         chatVC.memebersToPush =  (recent[kMEMBERSTOPUSH] as? [String])!
         chatVC.chatRoomId =  (recent[kCHATROOMID] as? String)!
         chatVC.titleName =  (recent[kWITHUSERFULLNAME] as? String)!
-        
+        //set isGroup property and group...
+        chatVC.isGroup = recent[kTYPE] as! String == kGROUP
         //navigate
         navigationController?.pushViewController(chatVC, animated: true)
     }
