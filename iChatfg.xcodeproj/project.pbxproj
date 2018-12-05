@@ -28,6 +28,8 @@
 		537D937221AEFDEC0000059B /* Recent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537D937121AEFDEC0000059B /* Recent.swift */; };
 		53E3B5E121AFFD9900F631FB /* RecentChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E3B5E021AFFD9900F631FB /* RecentChatCell.swift */; };
 		53E3B5E321B15C9600F631FB /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E3B5E221B15C9600F631FB /* ChatVC.swift */; };
+		53E3B5E621B5553700F631FB /* OutgoingMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E3B5E521B5553700F631FB /* OutgoingMessage.swift */; };
+		53E3B5E821B57EFE00F631FB /* IncomingMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E3B5E721B57EFE00F631FB /* IncomingMessage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +58,8 @@
 		537D937121AEFDEC0000059B /* Recent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recent.swift; sourceTree = "<group>"; };
 		53E3B5E021AFFD9900F631FB /* RecentChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentChatCell.swift; sourceTree = "<group>"; };
 		53E3B5E221B15C9600F631FB /* ChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatVC.swift; sourceTree = "<group>"; };
+		53E3B5E521B5553700F631FB /* OutgoingMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutgoingMessage.swift; sourceTree = "<group>"; };
+		53E3B5E721B57EFE00F631FB /* IncomingMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomingMessage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +95,7 @@
 		5315BA8621ABFEB2009D8072 /* iChatfg */ = {
 			isa = PBXGroup;
 			children = (
+				53E3B5E421B5551600F631FB /* Model */,
 				5315BAA721AC14E4009D8072 /* Extensions */,
 				5315BA9C21AC0084009D8072 /* Storyboards */,
 				5315BA9B21AC0078009D8072 /* View */,
@@ -154,6 +159,15 @@
 				5315BAA821AC1512009D8072 /* Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		53E3B5E421B5551600F631FB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				53E3B5E521B5553700F631FB /* OutgoingMessage.swift */,
+				53E3B5E721B57EFE00F631FB /* IncomingMessage.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		9BF83E58E4EACF5779998167 /* Frameworks */ = {
@@ -338,6 +352,7 @@
 				537D936E21AD9C8E0000059B /* ChatsVC.swift in Sources */,
 				5315BA8A21ABFEB2009D8072 /* WelcomeVC.swift in Sources */,
 				537D936821AD62440000059B /* SettingsTVC.swift in Sources */,
+				53E3B5E621B5553700F631FB /* OutgoingMessage.swift in Sources */,
 				5315BAAB21AC27F6009D8072 /* RegisterVC.swift in Sources */,
 				5315BA8821ABFEB2009D8072 /* AppDelegate.swift in Sources */,
 				5315BAA521AC12F6009D8072 /* FCollectionReference.swift in Sources */,
@@ -350,6 +365,7 @@
 				537D936A21AD6E650000059B /* UserCell.swift in Sources */,
 				5315BAA921AC1512009D8072 /* Extensions.swift in Sources */,
 				537D936C21AD779B0000059B /* UsersTVC.swift in Sources */,
+				53E3B5E821B57EFE00F631FB /* IncomingMessage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
