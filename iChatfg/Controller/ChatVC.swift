@@ -131,9 +131,9 @@ class ChatVC: JSQMessagesViewController,UIImagePickerControllerDelegate,UINaviga
         
         if FUser.currentId() == data4Cell.senderId {
             //outgoing
-            cell.textView.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+            cell.textView?.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         }else {
-            cell.textView.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+            cell.textView?.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         }
         
         return cell
@@ -233,7 +233,7 @@ class ChatVC: JSQMessagesViewController,UIImagePickerControllerDelegate,UINaviga
         //create our actions for menu
         let takePhotoOrVideo = UIAlertAction(title: "Camera", style: .default) { (action) in
             print("Camera pressed!!")
-           
+            camera.PresentMultyCamera(target: self, canEdit: false)
         }
         
         let sharePicture = UIAlertAction(title: "Photo library", style: .default) { (action) in
@@ -243,6 +243,7 @@ class ChatVC: JSQMessagesViewController,UIImagePickerControllerDelegate,UINaviga
         
         let shareVideo = UIAlertAction(title: "Video Library", style: .default) { (action) in
             print("Video Library pressed!!")
+            camera.PresentVideoLibrary(target: self, canEdit: false)
         }
         
         let shareLocation = UIAlertAction(title: "Share Location", style: .default) { (action) in
@@ -304,6 +305,55 @@ class ChatVC: JSQMessagesViewController,UIImagePickerControllerDelegate,UINaviga
         self.loadMoreMessages(maxNumber: maxMessagesNumber, minNumber: minMessagesNumber)
         collectionView.reloadData()
         print("Load more messages....")
+    }
+    
+    override func collectionView(_ collectionView: JSQMessagesCollectionView!, didTapMessageBubbleAt indexPath: IndexPath!) {
+        print("Tap on meesage at \(indexPath.row)")
+        //get message
+        let messageDictionary = messagesDictionaryArray[indexPath.row]
+        //type of message
+        let type = messageDictionary[kTYPE] as! String
+        
+        switch type {
+        case kPICTURE:
+            print("Picture message tapped")
+            //load image browser
+            let message = messages[indexPath.row]
+            let mediItem = message.media as! JSQPhotoMediaItem
+            
+            let photos = IDMPhoto.photos(withImages: [mediItem.image])
+            let photoBowser = IDMPhotoBrowser(photos: photos)
+            //present photobrowser with the tapped picture
+            self.present(photoBowser!, animated: true, completion: nil)
+            
+        case kLOCATION:
+            print("Location message tapped")
+        case kVIDEO:
+            print("Video message tapped")
+            //we want to load player and play video
+            //get JQSMessage
+            let message = messages[indexPath.row]
+            
+            let mediaItem = message.media as! VideoMessage
+            //Media player
+            let player = AVPlayer(url: mediaItem.fileUrl! as URL )
+            //Video controller
+            let moviePlayerVC = AVPlayerViewController()
+            //session Audio
+            let audioSession = AVAudioSession.sharedInstance()
+            //configure audio
+            try! audioSession.setCategory(.playAndRecord, mode: .default, options: .defaultToSpeaker)
+            
+            moviePlayerVC.player = player
+            
+            //present video view controller
+            self.present(moviePlayerVC, animated: true) {
+                moviePlayerVC.player!.play()
+            }
+            
+        default:
+            print("Unknown message tapped")
+        }
     }
     
     //MARK:- Load messages
@@ -498,6 +548,7 @@ class ChatVC: JSQMessagesViewController,UIImagePickerControllerDelegate,UINaviga
     //MARK: - Ibactions
     @objc func backButtonPressed(){
         print("Back button pressed")
+        navigationController?.popViewController(animated: true)
     }
     @objc func infoButtonPressed(){
         print("Info button pressed")
@@ -541,14 +592,14 @@ class ChatVC: JSQMessagesViewController,UIImagePickerControllerDelegate,UINaviga
                 if imageLink != nil {
                     
                     //to display on chatsVC as last message sent
-                    let text = kPICTURE
+                    let text = "[\(kPICTURE)]" 
                     outgoingMessage = OutgoingMessage(message: text, pictureLink: imageLink!, senderId: currentUser.objectId, senderName: currentUser.firstname, date: date, status: kDELIVERED, type: kPICTURE)
                     
                     JSQSystemSoundPlayer.jsq_playMessageSentSound()
                     self.finishSendingMessage()
                     
                     //we have here any kind of message
-                    outgoingMessage?.sendMessage(chatRomId: self.chatRoomId, messageDictionary:outgoingMessage!.messageDctionary , memebersIds: self.chatMembers)
+                    outgoingMessage?.sendMessage(chatRomId: self.chatRoomId, messageDictionary:outgoingMessage!.messageDctionary , memebersIds: self.chatMembers, memebersToPush: self.memebersToPush)
                     
                 }else{
                     return
@@ -557,12 +608,36 @@ class ChatVC: JSQMessagesViewController,UIImagePickerControllerDelegate,UINaviga
             return
         }
         
+        //Send video
+        if let video = video {
+            let videoData = NSData(contentsOfFile: video.path!)
+            
+            let thumbnailData = videoThumbnail(video: video).jpegData(compressionQuality: 0.3)
+            
+            uploadVideo(video: videoData!, chatRoomId: chatRoomId, view: self.navigationController!.view) { (videoLink) in
+                if videoLink != nil{
+                    let text = "[\(kVIDEO)]"
+                    outgoingMessage = OutgoingMessage(message: text, video: videoLink!, thumbnail: thumbnailData! as NSData, senderId: currentUser.objectId, senderName: currentUser.firstname, date: date, status: kDELIVERED, type: kVIDEO)
+                    
+                    
+                    JSQSystemSoundPlayer.jsq_playMessageSentSound()
+                    self.finishSendingMessage()
+                    
+                    //we have here any kind of message
+                    outgoingMessage?.sendMessage(chatRomId: self.chatRoomId, messageDictionary:outgoingMessage!.messageDctionary , memebersIds: self.chatMembers, memebersToPush: self.memebersToPush)
+                    
+                }
+            }
+            return
+            
+        }
+        
         
         JSQSystemSoundPlayer.jsq_playMessageSentSound()
         self.finishSendingMessage()
         
         //we have here any kind of message
-        outgoingMessage?.sendMessage(chatRomId: self.chatRoomId, messageDictionary:outgoingMessage!.messageDctionary , memebersIds: self.chatMembers)
+        outgoingMessage?.sendMessage(chatRomId: self.chatRoomId, messageDictionary:outgoingMessage!.messageDctionary , memebersIds: self.chatMembers, memebersToPush: self.memebersToPush)
     }
     
     //MARK: - Helper functions
@@ -587,7 +662,7 @@ class ChatVC: JSQMessagesViewController,UIImagePickerControllerDelegate,UINaviga
         print("IsIncoming",messageDictionary[kSENDERID] as! String == FUser.currentId())
         return messageDictionary[kSENDERID] as! String != FUser.currentId()
     }
-    //MARK:- UIIagePickerController delegate
+    //MARK:- UIImagePickerController delegate
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         //function invoked when you click on picture/video
         let video = info[UIImagePickerController.InfoKey.mediaURL] as? NSURL

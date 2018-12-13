@@ -91,11 +91,11 @@ func downloadImage(imageUrl: String, completion: @escaping(_ image: UIImage?) ->
             let data = NSData(contentsOf: imageURL! as URL)
             
             if data != nil {
-                
+                //we got some data from URL
                 var docURL = getDocumentsURL()
                 
                 docURL = docURL.appendingPathComponent(imageFileName, isDirectory: false)
-                
+                //if there is a file with same name, it'll do a copy and only replace it when completed
                 data!.write(to: docURL, atomically: true)
                 
                 let imageToReturn = UIImage(data: data! as Data)
@@ -105,6 +105,7 @@ func downloadImage(imageUrl: String, completion: @escaping(_ image: UIImage?) ->
                 }
                 
             } else {
+                //URL empty
                 DispatchQueue.main.async {
                     print("no image in database")
                     completion(nil)
@@ -137,7 +138,7 @@ func uploadVideo(video: NSData, chatRoomId: String, view: UIView, completion: @e
         
         if error != nil {
             
-            print("error couldnty upload video \(error!.localizedDescription)")
+            print("error couldnt upload video \(error!.localizedDescription)")
             return
         }
         
